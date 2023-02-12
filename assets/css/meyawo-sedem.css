@@ -11198,7 +11198,10 @@ p {
 }
 
 .portfolio-card .portfolio-card-img {
-  width: 100%;
+  height: 250px;
+  max-width: 350px;
+  border: 1px solid silver;
+  border-radius: 8px;
 }
 
 .portfolio-card .portfolio-card-overlay {
@@ -11211,9 +11214,7 @@ p {
   text-align: center;
   visibility: hidden;
   opacity: 0;
-  background-image: -webkit-linear-gradient(bottom, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
-  background-image: linear-gradient(to top, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
-  -webkit-transition: all, 0.3s;
+  background-color: #444;
   transition: all, 0.3s;
   width: 0;
   height: 0;
@@ -11237,14 +11238,19 @@ p {
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
   width: 100%;
+  opacity: 1;
+}
+
+.portfolio-card-caption h4, p{
+  color: white;
 }
 
 .portfolio-card:hover .portfolio-card-overlay {
-  opacity: 1;
+  opacity: 0.8;
   visibility: visible;
   width: 100%;
   height: 100%;
-  border-radius: 0;
+  border-radius: 8px;
 }
 
 @media (max-width: 767.98px) {
