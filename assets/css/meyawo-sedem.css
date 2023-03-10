@@ -399,6 +399,49 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+/* sedem code */
+.project-container{
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail-project-container{
+  display: flex;
+  justify-content: center;
+}
+
+.project-image{
+  box-shadow: 0 0 1em grey;
+}
+
+.arrow-icons{
+  align-self: center;
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0 40px;
+  cursor: pointer;
+}
+
+.arrow-icons-white{
+  display: block;
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.section-gray{
+  background-color: #fafafa;
+}
+
+[v-cloak] {
+  display: none !important;
+}
+
+/* end */
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
@@ -2771,15 +2814,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1e2933;
-  border-color: #1e2933;
+  background-color: #206FB0;
+  color: white;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #1e2933;
-  border-color: #1e2933;
+  background-color: #206FB0;
+  color: white;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -11149,7 +11190,7 @@ p {
 
 .service-card .body img.icon {
   margin-top: 40px;
-  width: 100px;
+  width: 50px;
   margin-bottom: 25px;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
@@ -12035,8 +12076,8 @@ pre .code {
 }
 
 .footer .social-links a:hover {
-  background: #695aa6;
-  border-color: #695aa6;
+  background: #206FB0;
+  border-color: #206FB0;
   color: #fff;
   text-decoration: none;
 }

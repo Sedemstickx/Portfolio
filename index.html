@@ -40,6 +40,9 @@
         </div>          
     </nav><!-- End of Page Navbar -->
 
+<!-- Vue js runs from here -->
+<div id="app" v-cloak>
+
     <!-- page header -->
     <header id="home" class="header">
         <div class="overlay"></div>
@@ -48,9 +51,12 @@
                 <span class="up text-white">HI,</span>
                 <span class="down text-white">I am Sedem Datsa</span>
             </h1>
-            <p class="header-subtitle text-white text-center">FULLSTACK WEB DEVELOPER</p>            
+            <p class="header-subtitle text-white text-center">FULLSTACK DEVELOPER</p>            
 
             <a href="https://github.com/Sedemstickx" class="btn btn-primary" target="_blank">Visit My Projects</a>
+            <br>
+
+            <a class="link" href="#about"><i class="ti-arrow-down arrow-icons-white mt-5"></i></a>
         </div>              
     </header><!-- end of page header -->
 
@@ -68,17 +74,17 @@
                     <p>
                        I am Sedem Datsa, a full stack web developer and graphics designer based in Ghana.              
                     </p>
-                    <a href="downloads/DatsaPiousSedemCV.pdf" class="btn-rounded btn btn-outline-primary mt-4" download target="_blank">Download CV</a>&nbsp;
-                    <a href="mailto:sedemdatsa69@gmail.com" class="btn-rounded btn btn-outline-danger mt-4 ml-2" target="_blank">Send me a mail</a>
+                    <a href="downloads/DatsaPiousSedemCV.pdf" class="btn-rounded btn btn-primary mt-4" download target="_blank">Download CV</a>&nbsp;
+                    <a href="mailto:sedemdatsa69@gmail.com" class="btn-rounded btn btn-outline-danger mt-4 ml-4" target="_blank">Send me a mail</a>
                 </div>              
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
-    <!-- service section -->
-    <section class="section" id="stack">
+    <!-- stack section -->
+    <section class="section section-gray" id="stack">
         <div class="container text-center">
-            <h6 class="section-title mb-6">My current stack</h6>
+            <h6 class="section-title mb-4">My current stack</h6>
             <!-- row -->
             <div class="row">
                 <div class="col-md-6 col-lg-3">
@@ -200,59 +206,22 @@
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img src="assets/imgs/portfolio/tecsup_screenshot_2.jpg" class="portfolio-card-img" alt="thetecsup homepage screenshot">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>thetecsup</h4>
-                                <p class="font-weight-normal">A simple to use tech support forum.</p>
-                                <p class="font-weight-normal">2020</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/portfolio/sms_screenshot.png" class="img-responsive rounded" alt="Susu management system screenshot">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Susu management system</h4>
-                                <p class="font-weight-normal">A susu mangement system for microfinance companies.</p>
-                                <p class="font-weight-normal">2022</p>
-                            </span>                         
-                        </span>                         
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/portfolio/Samir_screenshot.png" class="img-responsive rounded" alt="Samir engineering website screenshot">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Samir Engineering website</h4>
-                                <p class="font-weight-normal">Contributed to the development of samir group new websites</p>
-                                <p class="font-weight-normal">2022</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-                <div class="col-md-4 mt-5">
-                    <a href="#" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/portfolio/Jquery_spa_Screenshot.png" class="img-responsive rounded" alt="Jquery single page application screenshot">    
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Jquery single page application template</h4>
-                                <p class="font-weight-normal">A simply made single page application(SPA) template that works exactly like modern SPA sites.</p>
-                                <p class="font-weight-normal">2021</p>
-                            </span>                         
-                        </span>                     
-                    </a>
-                </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
+            <h6 class="section-title mb-4">Portfolio</h6>
+
+<!-- project slides -->
+<div class="project-container">
+    <i class="ti-angle-left arrow-icons" v-on:click="slide(-1)"></i>
+   <div>
+    <h2 class="text-muted mt-2 mb-3">{{project_title}}</h2>
+     <a :href="project_link" :target="blank">
+    <img :src="image" class="rounded img-fluid project-image" :alt="project_alt" width="800" height="400">
+     </a>
+    <p class="text-dark font-weight-bold mt-3">{{project_year}}</p>
+    <p class="text-dark font-weight-bold">{{project_description}}</p>
+   </div>
+    <i class="ti-angle-right arrow-icons" v-on:click="slide(1)"></i>
+</div>
+
     </section> <!-- end of portfolio section -->
 
 
@@ -277,16 +246,17 @@
     <!-- footer -->
     <div class="container">
         <footer class="footer">       
-            <p class="mb-0"><b class="ml-1">Sedem Datsa</b> <b>@ <script>document.write(new Date().getFullYear())</script></b> </p>
+            <p class="mb-0"><b class="ml-1">Sedem Datsa</b> <b>@ {{year}}</b> </p>
             <div class="social-links text-right m-auto ml-sm-auto">
                 <a href="https://www.facebook.com/sedem.datsa/" class="link" target="_blank"><i class="ti-facebook"></i></a>
-                <a href="https://twitter.com/SedemStickx" class="link" target="_blank"><i class="ti-twitter-alt"></i></a>
                 <a href="https://www.linkedin.com/in/sedem-datsa/" class="link" target="_blank"><i class="ti-linkedin"></i></a>
                 <a href="https://github.com/Sedemstickx" class="link" target="_blank"><i class="ti-github"></i></a>
             </div>
         </footer>
     </div> <!-- end of page footer -->
-	
+
+</div>    
+
 	<!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -296,6 +266,10 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+
+    <!-- vue js -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 </html>
