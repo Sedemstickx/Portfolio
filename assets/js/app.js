@@ -36,7 +36,7 @@ var App = Vue.createApp({
             link: "https://www.samirgroupgh.com/",                        
           },
           {
-            title: "Jquery single page application template",
+            title: "jQuery single page application template",
             year: 2021,
             description: "A simply made single page application(SPA) template that works exactly like modern SPA sites.",            
             src: "assets/imgs/portfolio/Jquery_spa_Screenshot.png",

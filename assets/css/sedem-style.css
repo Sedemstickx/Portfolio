@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.project-container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .thumbnail-project-container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .project-image{
+    box-shadow: 0 0 1em grey;
+  }
+  
+  .arrow-icons{
+    align-self: center;
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 0 40px;
+    cursor: pointer;
+  }
+  
+  .arrow-icons-white{
+    display: block;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .section-gray{
+    background-color: #fafafa;
+  }
+  
+  [v-cloak] {
+    display: none !important;
+  }
+
+  .font-montserrat{
+      font-family: Montserrat;
+  }
+
+  .link:hover{
+      color: #206FB0 !important;
+  }

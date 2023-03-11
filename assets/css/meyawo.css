@@ -399,48 +399,6 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-/* sedem code */
-.project-container{
-  display: flex;
-  justify-content: center;
-}
-
-.thumbnail-project-container{
-  display: flex;
-  justify-content: center;
-}
-
-.project-image{
-  box-shadow: 0 0 1em grey;
-}
-
-.arrow-icons{
-  align-self: center;
-  font-size: 40px;
-  font-weight: bolder;
-  margin: 0 40px;
-  cursor: pointer;
-}
-
-.arrow-icons-white{
-  display: block;
-  position: relative;
-  z-index: 1000;
-  text-align: center;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.section-gray{
-  background-color: #fafafa;
-}
-
-[v-cloak] {
-  display: none !important;
-}
-
-/* end */
 
 .lead {
   font-size: 1.25rem;
@@ -12205,9 +12163,6 @@ pre .code {
 @media (max-width: 991.98px) {
   .header {
     background-size: cover;
-  }
-  .header-content {
-    padding-left: calc(100% / 5) !important;
   }
 }
 
