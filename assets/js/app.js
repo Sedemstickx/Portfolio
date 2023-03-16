@@ -1,4 +1,6 @@
-var App = Vue.createApp({
+const { createApp } = Vue
+
+createApp({
   data() {
       return {
         year: null,
