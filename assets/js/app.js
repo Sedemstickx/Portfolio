@@ -14,6 +14,14 @@ createApp({
         image: "",
         images: [
           {
+            title: "Web based point of sale software",
+            year: 2023,
+            description: "A simple and flexible web based point of sale software.",
+            src: "assets/imgs/portfolio/pos.png",
+            alt: "Point of sale project image",
+            link: "#",
+          },
+          {
             title: "thetecsup",
             year: 2020,
             description: "A simple to use tech support forum.",
