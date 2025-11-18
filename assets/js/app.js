@@ -19,7 +19,7 @@ createApp({
             description: "A simple and flexible web based point of sale software.",
             src: "assets/imgs/portfolio/pos.png",
             alt: "Point of sale project image",
-            link: "https://hexpos.000webhostapp.com/",
+            link: "https://hex-pos.com/",
           },
           {
             title: "thetecsup",
